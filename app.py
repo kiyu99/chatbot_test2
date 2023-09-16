@@ -39,6 +39,7 @@ st.write("ChatGPT APIを使ってアウトプット習慣をつけよう。")
 if st.session_state["messages"]:
     messages = st.session_state["messages"]
     for message in messages:
+      if message["role"] != "system":  # systemメッセージはスキップ
         speaker = "🙂" if message["role"] == "user" else "🤖"
         st.write(speaker + ": " + message["content"])
 
