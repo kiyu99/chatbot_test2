@@ -32,8 +32,8 @@ def communicate():
 
 # ユーザーインターフェイスの構築
 st.title("AI Study Mate")
-st.image("chatbot.png")
 st.write("ChatGPT APIを使ってアウトプット習慣をつけよう。")
+st.image("chatbot.png")
 
 # メッセージ表示エリア
 if st.session_state["messages"]:
