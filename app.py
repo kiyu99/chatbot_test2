@@ -9,7 +9,7 @@ openai.api_key = st.secrets.OpenAIAPI.openai_api_key
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
         {"role": "system", "content": st.secrets.AppSettings.chatbot_setting},
-        {"role": "bot", "content": "今日は何を学びましたか？"}
+        {"role": "assistant", "content": "今日は何を学びましたか？"}  # 'bot' を 'assistant' に変更
     ]
 
 # チャットボットとやりとりする関数
